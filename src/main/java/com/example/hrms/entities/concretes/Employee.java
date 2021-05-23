@@ -17,13 +17,6 @@ public class Employee extends User {
 		
 
 
-	public int getId() {
-		return employee_id;
-	}
-
-	public void setId(int id) {
-		this.employee_id = id;
-	}
 
 
 	}

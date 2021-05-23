@@ -21,29 +21,5 @@ public class Candidates extends User{
 	@Column(name="nationalIdentity")
 	private String nationalIdentity;
 
-	public int getCandidates_id() {
-		return candidates_id;
-	}
-
-	public void setCandidates_id(int candidates_id) {
-		this.candidates_id = candidates_id;
-	}
-
-	public String getBirthdate() {
-		return birthdate;
-	}
-
-	public void setBirthdate(String birthdate) {
-		this.birthdate = birthdate;
-	}
-
-	public String getNationalIdentity() {
-		return nationalIdentity;
-	}
-
-	public void setNationalIdentity(String nationalIdentity) {
-		this.nationalIdentity = nationalIdentity;
-	}
-	 
-		
+	
 }

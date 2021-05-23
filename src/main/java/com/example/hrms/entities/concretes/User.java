@@ -28,56 +28,6 @@ public class User {
 	@Column(name="last_name")
 	private String last_name;
 	
-	public User() {
-		
-	}
-
-	public int getId() {
-		return user_id;
-	}
-
-	public void setId(int id) {
-		this.user_id = id;
-	}
-
-	public String getEmail_address() {
-		return email_address;
-	}
-
-	public void setEmail_address(String email_address) {
-		this.email_address = email_address;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public String getPassword_again() {
-		return password_again;
-	}
-
-	public void setPassword_again(String password_again) {
-		this.password_again = password_again;
-	}
-
-	public String getFirst_name() {
-		return first_name;
-	}
-
-	public void setFirst_name(String first_name) {
-		this.first_name = first_name;
-	}
-
-	public String getLast_name() {
-		return last_name;
-	}
-
-	public void setLast_name(String last_name) {
-		this.last_name = last_name;
-	}
+	
 	
 }

@@ -19,30 +19,7 @@ public class Employers extends User{
 	private String phone;
 	@Column(name="website")
 	private String website;
-	public int getId() {
-		return employer_id;
-	}
-	public void setId(int id) {
-		this.employer_id = id;
-	}
-	public String getCompany_name() {
-		return company_name;
-	}
-	public void setCompany_name(String company_name) {
-		this.company_name = company_name;
-	}
-	public String getPhone() {
-		return phone;
-	}
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-	public String getWebsite() {
-		return website;
-	}
-	public void setWebsite(String website) {
-		this.website = website;
-	}
+	
 	
 	
 	
