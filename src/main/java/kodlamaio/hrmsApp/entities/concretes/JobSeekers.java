@@ -1,11 +1,17 @@
 package kodlamaio.hrmsApp.entities.concretes;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,7 +26,7 @@ public class JobSeekers  {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="user_id")
+	@Column(name="j_id")
 	private int id ;
 	
 	@Column(name="f_name")
@@ -33,7 +39,11 @@ public class JobSeekers  {
 	private String nationalId;
 	
 	@Column(name="birth_date")
-	private String birthDate;
+	private int birthDate;
+	@ManyToOne(fetch = FetchType.LAZY, targetEntity = JobSeekers.class, cascade = CascadeType.ALL)
+	@JoinColumn(name = "j_id", referencedColumnName = "user_id")
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+	private Users user;
 
 	
 

@@ -21,7 +21,7 @@ public class HrmsPerson {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="user_id")
+	@Column(name="h_id")
 	private int id ;
 	
 

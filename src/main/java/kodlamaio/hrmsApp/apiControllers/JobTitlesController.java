@@ -2,42 +2,36 @@ package kodlamaio.hrmsApp.apiControllers;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import kodlamaio.hrmsApp.business.abstracts.EmployersService;
+import kodlamaio.hrmsApp.business.abstracts.JobTitlesService;
 import kodlamaio.hrmsApp.core.utilities.results.DataResult;
 import kodlamaio.hrmsApp.core.utilities.results.ErrorResult;
 import kodlamaio.hrmsApp.core.utilities.results.Result;
 import kodlamaio.hrmsApp.core.utilities.results.SuccessResult;
-import kodlamaio.hrmsApp.entities.concretes.Employers;
-
-
-
-
+import kodlamaio.hrmsApp.entities.concretes.JobTitles;
 
 @RestController
-@RequestMapping("/api/employers")
-public class EmployerController {
-	@Autowired
-	private EmployersService employerService; //aslında burada productmanager var
-	public EmployerController(EmployersService employerService) {
+@RequestMapping("/api/jobtitles")
+public class JobTitlesController {
+	private JobTitlesService jobtitlesService; //aslında burada productmanager var
+	public JobTitlesController(JobTitlesService jobtitlesService) {
 		super();
-		this.employerService = employerService;
+		this.jobtitlesService = jobtitlesService;
 	}
 
 	@GetMapping("/getall")//bu controllerın sonuna bunu da koyarsak getall fonksiyonuna erişir.
-	public DataResult<List<Employers>> getAll(){
-		return this.employerService.getAll();
+	public DataResult<List<JobTitles>> getAll(){
+		return this.jobtitlesService.getAll();
 		
 	}
 	 @PostMapping("/add")
-	    public Result add(@RequestBody Employers employer) {
-		 Result result = employerService.add(employer);
+	    public Result add(@RequestBody JobTitles jobtitle) {
+		 Result result = jobtitlesService.add(jobtitle);
 	        if (!result.isSuccess()){
 	            return new ErrorResult(result.getMessage());
 	        }
@@ -45,3 +39,4 @@ public class EmployerController {
 	    }
 
 }
+

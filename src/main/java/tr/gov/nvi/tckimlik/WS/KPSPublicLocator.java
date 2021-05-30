@@ -22,7 +22,7 @@ public class KPSPublicLocator extends org.apache.axis.client.Service implements 
     }
 
     // Use to get a proxy class for KPSPublicSoap
-    private java.lang.String KPSPublicSoap_address = "https://tckimlik.nvi.gov.tr/service/kpspublic.asmx";
+    private java.lang.String KPSPublicSoap_address = "https://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx";
 
     public java.lang.String getKPSPublicSoapAddress() {
         return KPSPublicSoap_address;
